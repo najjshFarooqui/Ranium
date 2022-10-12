@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <Button
+                android:id="@+id/btnStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="select start date"
+                app:layout_constraintEnd_toStartOf="@+id/btnEndDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select End Date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnStartDate"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnStartDate" />
+
+            <TextView
+                android:id="@+id/labelOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:text="Fastest Asteroid"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+
+
+            <TextView
+                android:id="@+id/labelFastestAsteroidName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Asteroid Name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/labelFastestAsteroidId"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelOne" />
+
+            <TextView
+                android:id="@+id/labelFastestAsteroidId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Asteroid Id"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/labelFastestAsteroidSpeed"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvFastestAsteroidName"
+                app:layout_constraintTop_toBottomOf="@+id/labelOne" />
+
+            <TextView
+                android:id="@+id/labelFastestAsteroidSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Asteroid Speed"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/labelFastestAsteroidId"
+                app:layout_constraintTop_toBottomOf="@+id/labelOne" />
+
+
+            <TextView
+                android:id="@+id/tvFastestAsteroidName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" Asteroid Name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tvFastestAsteroidId"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelFastestAsteroidName" />
+
+            <TextView
+                android:id="@+id/tvFastestAsteroidId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" Asteroid Id"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tvFastestAsteroidSpeed"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvFastestAsteroidName"
+                app:layout_constraintTop_toBottomOf="@+id/labelFastestAsteroidId" />
+
+            <TextView
+                android:id="@+id/tvFastestAsteroidSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" Asteroid Speed"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvFastestAsteroidId"
+                app:layout_constraintTop_toBottomOf="@+id/labelFastestAsteroidSpeed" />
+
+
+            <TextView
+                android:id="@+id/labelClosestAsteroid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Closest Asteroid"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFastestAsteroidSpeed" />
+
+
+            <TextView
+                android:id="@+id/labelClosestAsteroidName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Asteroid Name-  "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelClosestAsteroid" />
+
+
+            <TextView
+                android:id="@+id/tvClosestAsteroidName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Closest Asteroid Name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/labelClosestAsteroidName"
+                app:layout_constraintTop_toBottomOf="@+id/labelClosestAsteroid" />
+
+            <TextView
+                android:id="@+id/labelClosestAsteroidId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Asteroid Id-  "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelClosestAsteroidName" />
+
+            <TextView
+                android:id="@+id/tvClosestAsteroidId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asteroid Id"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/labelClosestAsteroidId"
+                app:layout_constraintTop_toBottomOf="@+id/labelClosestAsteroidName" />
+
+            <TextView
+                android:id="@+id/labelCloseseAsteroidDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Asteroid Distance -"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelClosestAsteroidId" />
+
+            <TextView
+                android:id="@+id/tvClosestAsteroidDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asteroid Distance"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/labelCloseseAsteroidDistance"
+                app:layout_constraintTop_toBottomOf="@+id/tvClosestAsteroidId" />
+
+
+            <TextView
+                android:id="@+id/labelAverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Average Size Of Asteroids In Km - "
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvClosestAsteroidDistance" />
+
+            <TextView
+                android:id="@+id/tvAverageSizeOfAsteroids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/labelAverage"
+                app:layout_constraintTop_toBottomOf="@+id/tvClosestAsteroidDistance" />
+
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAverageSizeOfAsteroids" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+</layout>
